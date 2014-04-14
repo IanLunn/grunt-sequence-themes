@@ -1,0 +1,42 @@
+{
+  "name": "grunt-sequence-themes",
+  "description": "Packages Sequence.js themes for distribution",
+  "version": "0.1.0",
+  "homepage": "https://github.com/IanLunn/grunt-sequence-themes",
+  "author": {
+    "name": "Ian Lunn",
+    "email": "hello@ianlunn.co.uk",
+    "url": "http://ianlunn.co.uk/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/IanLunn/grunt-sequence-themes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IanLunn/grunt-sequence-themes/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/IanLunn/grunt-sequence-themes/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-text-replace": "^0.3.11",
+    "grunt-contrib-rename": "0.0.3",
+    "grunt-contrib-compress": "^0.8.0",
+    "grunt": "~0.4.4"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.4"
+  },
+  "keywords": [
+    "sequence",
+    "sequence.js"
+  ]
+}
