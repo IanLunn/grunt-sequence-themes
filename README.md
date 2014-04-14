@@ -25,32 +25,6 @@ In your project's Gruntfile, add a section named `sequence_themes` to the data o
 ```js
 grunt.initConfig({
   sequence_themes: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
-});
-```
-
-### Options
-
-#### options.type
-Type: `String`
-Default value: `''`
-
-A string value that determines the theme type. Either 'free' or 'premium'.
-
-### Usage Examples
-
-#### Default Options
-In this example, free themes are packaged and placed in the directories `packaged-themes/free/`. Premium themes are packaged and placed in the directories `packaged-themes/premium`.
-
-```js
-grunt.initConfig({
-  package_sequence_themes: {
     themes: {
       options: {
         type: 'free'
@@ -69,6 +43,35 @@ grunt.initConfig({
       cwd: 'premium-themes',
       src: ['*'],
       dest: 'packaged-themes/premium/'
+    }
+  }
+});
+```
+
+### Options
+
+#### options.type
+Type: `String`
+Default value: `''`
+
+A string value that determines the theme type. Either 'free' or 'premium'.
+
+### Usage Examples
+
+#### Default Options
+In this example, free themes are packaged and placed in the directories `packaged-themes/free/`.
+
+```js
+grunt.initConfig({
+  package_sequence_themes: {
+    themes: {
+      options: {
+        type: 'free'
+      },
+      expand: true,
+      cwd: 'themes',
+      src: ['*'],
+      dest: 'packaged-themes/free/'
     }
   }
 });
