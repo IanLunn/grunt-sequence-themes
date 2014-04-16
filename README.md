@@ -17,14 +17,14 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-sequence-themes');
 ```
 
-## The "sequence_themes" task
+## The "package_sequence_themes" task
 
 ### Overview
-In your project's Gruntfile, add a section named `sequence_themes` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `package_sequence_themes` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  sequence_themes: {
+  package_sequence_themes: {
     themes: {
       options: {
         type: 'free'
