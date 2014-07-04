@@ -1,7 +1,7 @@
 {
   "name": "grunt-sequence-themes",
   "description": "Packages Sequence.js themes for distribution",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/IanLunn/grunt-sequence-themes",
   "author": {
     "name": "Ian Lunn",

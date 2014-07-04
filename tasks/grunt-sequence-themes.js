@@ -25,14 +25,14 @@ module.exports = function (grunt) {
 
       grunt.config.set('copy.themes', {
         expand: true,
-        cwd: 'themes/',
+        cwd: 'free/',
         src: ['**'],
         dest: 'packaged-themes/free/'
       });
 
       grunt.config.set('copy.packaged_themes', {
         expand: true,
-        cwd: 'premium-themes/',
+        cwd: 'premium/',
         src: ['**'],
         dest: 'packaged-themes/premium/'
       });

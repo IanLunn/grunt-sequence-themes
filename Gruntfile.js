@@ -17,7 +17,7 @@ module.exports = function(grunt) {
           type: 'free'
         },
         expand: true,
-        cwd: 'themes',
+        cwd: 'free',
         src: ['*'],
         dest: 'packaged-themes/free/'
       },
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
           type: 'premium'
         },
         expand: true,
-        cwd: 'premium-themes',
+        cwd: 'premium',
         src: ['*'],
         dest: 'packaged-themes/premium/'
       }
