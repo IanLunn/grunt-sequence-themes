@@ -30,7 +30,7 @@ grunt.initConfig({
         type: 'free'
       },
       expand: true,
-      cwd: 'themes',
+      cwd: 'free',
       src: ['*'],
       dest: 'packaged-themes/free/'
     },
@@ -40,7 +40,7 @@ grunt.initConfig({
         type: 'premium'
       },
       expand: true,
-      cwd: 'premium-themes',
+      cwd: 'premium',
       src: ['*'],
       dest: 'packaged-themes/premium/'
     }

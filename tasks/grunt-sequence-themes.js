@@ -71,15 +71,6 @@ module.exports = function (grunt) {
         // Get the theme name
         var theme = src[0].split('/')[1];
 
-        // Copy theme files to the packaged-themes directory
-        grunt.config.set('copy.' + theme + '.files', [{
-          expand: true,
-          flatten: true,
-          cwd: 'text-files',
-          src: [themeType + '-readme.txt', themeType + '-theme-license.txt', 'sequencejs-license.txt'],
-          dest: dest
-        }]);
-
         // Rename global text files
         grunt.config.set('rename.' + theme + '.files', [{
           src: [dest + '/' + themeType + '-readme.txt'],
