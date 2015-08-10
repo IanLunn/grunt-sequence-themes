@@ -49,8 +49,7 @@ function appendHtml(slug) {
   });
 }
 
-var styles = 'body {padding-bottom: 40px;}';
-    styles += '#banner {position: fixed; z-index: 9999; left: 0; right: 0; bottom: 0; height: 40px; padding: 0 .5em; font-family: sans-serif; font-size: 14px; color: white; background: #F96D38; border: none;}';
+var styles = '#banner {position: fixed; z-index: 9999; left: 0; right: 0; bottom: 0; height: 40px; padding: 0 .5em; font-family: sans-serif; font-size: 14px; color: white; background: #F96D38; border: none;}';
     styles += '#banner .back {position: absolute;top: 2px;left: 3.5em;right:5em;height: 100%;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;color: white;text-decoration: none;white-space: nowrap;line-height: 2.85714em;font-weight: bold;}';
     styles += '#banner .back:before {content: "";display: inline-block;width: 7px;height: 12px;margin-right: 4px;background: url(../demo/images/back.svg) no-repeat;}';
     styles += '#banner object {position: absolute;top: 0;bottom: 0;height: 100%;padding: 0 .5em;display: inline-block;vertical-align: middle;}';
