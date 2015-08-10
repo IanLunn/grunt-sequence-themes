@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirect to sequencejs.com if trying to access the top level demo.sequencejs.com
+RewriteCond %{HTTP_HOST} demo.sequencejs\.com$ [NC]
+RewriteRule ^/?$ http://sequencejs.com/ [L,R=301]

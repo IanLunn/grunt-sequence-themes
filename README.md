@@ -79,7 +79,3 @@ grunt.initConfig({
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Fair Warning
-
-grunt-sequence-themes is used internally but is made publicly available for Sequence theme authors that may find it useful. It is by no means heavily tested or extensive; neither is it particularly nice code. If you would like to improve grunt-sequence-themes, please feel free to submit a pull request.

@@ -1,7 +1,7 @@
 {
   "name": "grunt-sequence-themes",
   "description": "Packages Sequence.js themes for distribution",
-  "version": "0.1.2",
+  "version": "2.0.0-alpha.1",
   "homepage": "https://github.com/IanLunn/grunt-sequence-themes",
   "author": {
     "name": "Ian Lunn",
@@ -25,12 +25,16 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "grunt-contrib-copy": "~0.5.0",
+    "grunt": "~0.4.4",
     "grunt-contrib-clean": "^0.5.0",
-    "grunt-text-replace": "^0.3.11",
+    "grunt-contrib-compress": "^0.12.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-cssmin": "^0.12.3",
+    "grunt-contrib-htmlmin": "^0.4.0",
     "grunt-contrib-rename": "0.0.3",
-    "grunt-contrib-compress": "^0.8.0",
-    "grunt": "~0.4.4"
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-text-replace": "^0.3.12"
   },
   "peerDependencies": {
     "grunt": "~0.4.4"

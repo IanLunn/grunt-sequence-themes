@@ -2,7 +2,7 @@
  * grunt-sequence-themes
  * https://github.com/IanLunn/grunt-sequence-themes
  *
- * Copyright (c) 2014 Ian Lunn
+ * Copyright © 2015 Ian Lunn Design Limited
  * Licensed under the MIT license.
  */
 
@@ -11,30 +11,43 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-    package_sequence_themes: {
-      themes: {
+    zip_themes: {
+      free: {
         options: {
-          type: 'free'
+          type: 'free',
+          dest: 'Products'
         },
         expand: true,
-        cwd: 'free',
-        src: ['*'],
-        dest: 'packaged-themes/free/'
+        cwd: '../sequence-themes/free',
+        src: ['*', '!*.zip'],
+        dest: '../Products/free/'
       },
 
-      premium_themes: {
+      premium: {
         options: {
-          type: 'premium'
+          type: 'premium',
+          dest: 'Products'
         },
         expand: true,
-        cwd: 'premium',
-        src: ['*'],
-        dest: 'packaged-themes/premium/'
+        cwd: '../sequence-themes/premium',
+        src: ['*', '!*.zip'],
+        dest: '../Products/premium/'
+      }
+    },
+
+    demo_themes: {
+      free: {
+        options: {
+          type: 'free',
+          dest: 'Products'
+        },
+        expand: true,
+        cwd: '',
+        src: ['../sequence-themes/free/*', '../sequence-themes/premium/*'],
+        dest: 'demos.sequencejs.com/'
       }
     }
   });
-
-
 
   // Actually load this plugin's task(s).
   grunt.loadTasks('tasks');
@@ -45,7 +58,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-rename');
   grunt.loadNpmTasks('grunt-text-replace');
   grunt.loadNpmTasks('grunt-contrib-compress');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask('package-themes', ['package_sequence_themes']);
+  grunt.registerTask('zip', 'Packages Sequence.js themes into zip files', ['zip_themes']);
 
+  grunt.registerTask('demo', 'Makes demo packages for Sequence.js themes', ['demo_themes']);
 };
