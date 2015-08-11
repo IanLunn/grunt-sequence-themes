@@ -25,7 +25,12 @@ module.exports = function (grunt) {
     if (i === 0) {
 
       // Clean previously packaged themes on first run
-      grunt.config.set('clean.packaged', ["products/"]);
+      grunt.config.set('clean.packaged', {
+        options: {
+          force: true
+        },
+        src: ["../Products/"]
+      });
       grunt.task.run('clean:packaged');
 
       grunt.config.set('copy.free', {
@@ -39,7 +44,8 @@ module.exports = function (grunt) {
           '!**/.DS_Store',
           '!**/.sass-cache/**',
           '!**/images/raw/**',
-          '!**/_notes/**'
+          '!**/_notes/**',
+          '!**/.git/**'
         ],
         dest: '../Products/free/'
       });
@@ -55,7 +61,8 @@ module.exports = function (grunt) {
           '!**/.DS_Store',
           '!**/.sass-cache/**',
           '!**/images/raw/**',
-          '!**/_notes/**'
+          '!**/_notes/**',
+          '!**/.git/**'
         ],
         dest: '../Products/premium/'
       });
