@@ -149,7 +149,7 @@ module.exports = function (grunt) {
           '*/scripts/*.min.js',
           '*/scripts/sequence-theme.*.js',
           '!*/scripts/sequence-theme.*.min.js',
-          '*/images/*',
+          '*/images/**',
           '!*/images/_notes/**',
           '!*/images/raw/**',
           '!**/.DS_Store'
@@ -169,7 +169,7 @@ module.exports = function (grunt) {
           '*/scripts/*.min.js',
           '*/scripts/sequence-theme.*.js',
           '!*/scripts/sequence-theme.*.min.js',
-          '*/images/*',
+          '*/images/**',
           '!*/images/_notes/**',
           '!*/images/raw/**',
           '!**/.DS_Store'
