@@ -235,6 +235,9 @@ module.exports = function (grunt) {
               from: '<!DOCTYPE html>',
               to: '<!--\n*\n* ▄▓▓▓▄\n* ▓▌      ▄▄▄  ▄▄▄▄▄  ▄   ▄   ▄▄▄  ▄▄▄▄▄   ▄▄▄▄  ▄▄▄\n* ▀▓▓▓▓  ▓▓ ▓▌ ▓▌ ▓▓▌ ▓▌  ▓▌ ▓▓ ▓▌ ▓▌ ▐▓▌ ▓▓▀   ▓▓ ▓▌\n*     ▓▌ ▓▓▀▀▀ ▓▌  ▓▌ ▓▓  ▓▌ ▓▓▀▀▀ ▓▌  ▓▌ ▓▓    ▓▓▀▀▀\n* ▀▓▓▓▀   ▀▓▓▀ ▀▓▓▓▓▌ ▀▓▓▓▓   ▀▓▓▀ ▓▌  ▓▌  ▀▓▓▀  ▀▓▓▀\n*                  ▓▌\n*\n* This is a demo for the Sequence.js theme: ' + theme + '\n*\n* Please see http://sequencejs.com/themes/' + theme + '/ before using this theme as you may be required\n* to purchase a license\n*\n* This demo is minified to protect its source. An unminified version along with instructions\n* can be found at: http://sequencejs.com/themes/' + theme + '/\n--><!DOCTYPE html>'
             }, {
+              from: '</head>',
+              to: "<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-11991680-8', 'auto');ga('send', 'pageview');</script></head>"
+            }, {
               from: '<script src="scripts/imagesloaded.pkgd.min.js"></script>',
               to: ''
             }, {
