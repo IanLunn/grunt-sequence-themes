@@ -233,15 +233,12 @@ module.exports = function (grunt) {
             overwrite: true,
             replacements: [{
               from: '<!DOCTYPE html>',
-              to: '<!--\n*\n* ▄▓▓▓▄\n* ▓▌      ▄▄▄  ▄▄▄▄▄  ▄   ▄   ▄▄▄  ▄▄▄▄▄   ▄▄▄▄  ▄▄▄\n* ▀▓▓▓▓  ▓▓ ▓▌ ▓▌ ▓▓▌ ▓▌  ▓▌ ▓▓ ▓▌ ▓▌ ▐▓▌ ▓▓▀   ▓▓ ▓▌\n*     ▓▌ ▓▓▀▀▀ ▓▌  ▓▌ ▓▓  ▓▌ ▓▓▀▀▀ ▓▌  ▓▌ ▓▓    ▓▓▀▀▀\n* ▀▓▓▓▀   ▀▓▓▀ ▀▓▓▓▓▌ ▀▓▓▓▓   ▀▓▓▀ ▓▌  ▓▌  ▀▓▓▀  ▀▓▓▀\n*                  ▓▌\n*\n* This is a demo for the Sequence.js theme: ' + theme + '\n*\n* Please see http://sequencejs.com/themes/' + theme + '/ before using this theme as you may be required\n* to purchase a license\n*\n* This demo is minified to protect its source. An unminified version along with instructions\n* can be found at: http://sequencejs.com/themes/' + theme + '/\n--><!DOCTYPE html>'
+              to: '<!DOCTYPE html><!--\n*\n* ▄▓▓▓▄\n* ▓▌      ▄▄▄  ▄▄▄▄▄  ▄   ▄   ▄▄▄  ▄▄▄▄▄   ▄▄▄▄  ▄▄▄\n* ▀▓▓▓▓  ▓▓ ▓▌ ▓▌ ▓▓▌ ▓▌  ▓▌ ▓▓ ▓▌ ▓▌ ▐▓▌ ▓▓▀   ▓▓ ▓▌\n*     ▓▌ ▓▓▀▀▀ ▓▌  ▓▌ ▓▓  ▓▌ ▓▓▀▀▀ ▓▌  ▓▌ ▓▓    ▓▓▀▀▀\n* ▀▓▓▓▀   ▀▓▓▀ ▀▓▓▓▓▌ ▀▓▓▓▓   ▀▓▓▀ ▓▌  ▓▌  ▀▓▓▀  ▀▓▓▀\n*                  ▓▌\n*\n* This is a demo for the Sequence.js theme: ' + theme + '\n*\n* Please see http://sequencejs.com/themes/' + theme + '/ before using this theme as you may be required\n* to purchase a license\n*\n* This demo is minified to protect its source. An unminified version along with instructions\n* can be found at: http://sequencejs.com/themes/' + theme + '/\n-->'
             }, {
               from: '</head>',
               to: "<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-11991680-8', 'auto');ga('send', 'pageview');</script></head>"
             }, {
               from: '<script src="scripts/imagesloaded.pkgd.min.js"></script>',
-              to: ''
-            }, {
-              from: '<script src="scripts/hammer.min.js"></script>',
               to: ''
             }, {
               from: '<script src="scripts/sequence.min.js"></script>',
@@ -276,7 +273,6 @@ module.exports = function (grunt) {
           files: [{
             src: [
               '../demo.sequencejs.com/' + theme + '/scripts/imagesloaded.pkgd.min.js',
-              '../demo.sequencejs.com/' + theme + '/scripts/hammer.min.js',
               '../demo.sequencejs.com/' + theme + '/scripts/sequence.min.js',
               '../demo.sequencejs.com/' + theme + '/scripts/sequence-theme.' + theme + '.js'
             ],
@@ -291,7 +287,6 @@ module.exports = function (grunt) {
           },
           cwd: '../demo.sequencejs.com/',
           src: [
-            theme + '/scripts/hammer.min.js',
             theme + '/scripts/imagesloaded.pkgd.min.js',
             theme + '/scripts/sequence-theme.' + theme + '.js',
             theme + '/scripts/sequence.min.js'
@@ -315,7 +310,8 @@ module.exports = function (grunt) {
         // Minify CSS
         grunt.config.set('cssmin.' + theme, {
           options: {
-            roundingPrecision: -1
+            roundingPrecision: -1,
+            compatibility: 'ie8'
           },
           files: [{
             expand: true,
